@@ -10,8 +10,26 @@
     {{example.text}}
   </p>
 
-  <input type="text" ng-model="example.text"/>
+  <input [(ngModel)]="story.name">
 
+  <ul id="vehicle">
+    <li *ngFor="let vehicle of vehicles">
+      {{vehicle}}
+    </li>
+  </ul>
+
+  <div *ngIf="vehicles.length">
+    <p>You have {{vehicles.length}} items in vehicles</p>
+  </div>
+
+  <h3>Extracting Tasty Object</h3>
+  <p>
+    Name: {{tasty.name}}<br />
+    Value: {{tasty.value}}<br />
+    Monster: {{beast}}
+  </p>
+
+  <input [value]="tasty.name">
 
   <div class="card">
     
