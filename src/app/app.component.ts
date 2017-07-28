@@ -6,17 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'the test application';
-  secret = '42';
-  monster = 'Beast';
-  story = {
-    name: 'The strike'
+  title = 'Test Application';
+
+  card = {
+    name: '',
+    imagePath: ''
+  }
+
+  colors = ['White', 'Blue', 'Black', 'Red', 'Green'];
+
+  sayGreetings = function(){
+    alert("Hello");
   };
-  tasty = {
-    name: 'Cat',
-    value: 7
-  };
-  vehicles = ['cat', 'bat', 'tact']
+
+  updateColor = function(){
+    // TODO: How do I pull selection? 
+    //alert("Changing color");
+  }
+
 }
 
 // export class StoryController {

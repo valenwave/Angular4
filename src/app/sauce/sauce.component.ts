@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sauce',
+  selector: 'special-sauce',
   templateUrl: './sauce.component.html',
   styleUrls: ['./sauce.component.css']
 })

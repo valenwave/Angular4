@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { SauceComponent } from './sauce/sauce.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SauceComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

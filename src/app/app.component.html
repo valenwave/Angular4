@@ -1,38 +1,31 @@
-<div class="box" style="text-align:center">
+<div class="box">
   <h1>
-    Welcome to {{title}}!
+    {{title}}
   </h1>
-  <p>
-    The answer to life is {{secret}}.
-  </p>
-  <p>
-    The following content will come from the textbox:<br/>
-    {{example.text}}
-  </p>
 
-  <input [(ngModel)]="story.name">
+  <section id="picker">
+    <div id="cardName">
+      <p>Name: <input type="text" [(ngModel)]="card.name"> </p>
+    </div>
 
-  <ul id="vehicle">
-    <li *ngFor="let vehicle of vehicles">
-      {{vehicle}}
-    </li>
-  </ul>
+    <form>
+      <input type="radio" (change)="updateColor()" value="White" name="color" [(ngModel)]="myColor"> White
+      <input type="radio" (change)="updateColor()" value="Blue" name="color" [(ngModel)]="myColor"> Blue
+      <input type="radio" (change)="updateColor()" value="Black" name="color" [(ngModel)]="myColor"> Black
+      <input type="radio" (change)="updateColor()" value="Red" name="color" [(ngModel)]="myColor"> Red
+      <input type="radio" (change)="updateColor()" value="Green" name="color" [(ngModel)]="myColor"> Green
+    </form>
 
-  <div *ngIf="vehicles.length">
-    <p>You have {{vehicles.length}} items in vehicles</p>
-  </div>
+    <p>
+      Image: <input type="text" [(ngModel)]="card.imagePath">
+    </p>
+        
+  </section>
 
-  <h3>Extracting Tasty Object</h3>
-  <p>
-    Name: {{tasty.name}}<br />
-    Value: {{tasty.value}}<br />
-    Monster: {{beast}}
-  </p>
 
-  <input [value]="tasty.name">
-
-  <div class="card">
-    
-  </div>
-
+  <section class="card" [class.white]="myColor == 'White'" [class.blue]="myColor == 'Blue'" [class.black]="myColor == 'Black'" 
+      [class.red]="myColor == 'Red'" [class.green]="myColor == 'Green'">
+    <p id="formattedName" *ngIf="card.name.length">{{card.name}}</p>
+    <img *ngIf="card.imagePath.length" [src]="card.imagePath" height="165" width="100%" />
+  </section>
 </div>
