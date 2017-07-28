@@ -25,7 +25,9 @@
 
   <section class="card" [class.white]="myColor == 'White'" [class.blue]="myColor == 'Blue'" [class.black]="myColor == 'Black'" 
       [class.red]="myColor == 'Red'" [class.green]="myColor == 'Green'">
-    <p id="formattedName" *ngIf="card.name.length">{{card.name}}</p>
-    <img *ngIf="card.imagePath.length" [src]="card.imagePath" height="165" width="100%" />
+    <p id="formattedName">{{card.name}}</p>
+    <div id="imageBorder">
+      <img *ngIf="card.imagePath.length" [src]="card.imagePath" />
+    </div>
   </section>
 </div>

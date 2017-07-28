@@ -25,8 +25,26 @@
 {
     border: 1px solid black;
     padding: 5px;
+    /*background:url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJklEQVQoU2NkIBIwEqmOgT4KfaHO2YzsLGxWE60Qq//o4xmsVgMAmkgCC5lw6k0AAAAASUVORK5CYII=
+    ) repeat;*/
     background-color:tan;
     opacity: 0.7;
+    text-align:center;
+    height: 20px;
+    font-weight:bold;
+}
+
+#imageBorder
+{
+    border: 5px solid lightgray;
+    height: 165px;
+}
+
+#imageBorder img
+{
+    height: 165px;
+    width: 100%;
 }
 
 .white{
